@@ -5675,7 +5675,7 @@ blockquote {
   height: 80vh;
   display: flex;
   position: sticky;
-  top: 0;
+  top: 10%;
   overflow: hidden;
 }
 
@@ -5789,7 +5789,9 @@ blockquote {
   display: flex;
   overflow: hidden;
 }
-
+.ourServ{
+filter: invert(4%) sepia(8%) saturate(6044%) hue-rotate(189deg) brightness(90%) contrast(93%);
+}
 .zoom-title-block {
   text-align: center;
   width: 50vw;
@@ -5805,13 +5807,13 @@ blockquote {
 }
 
 .section-home-service {
-  background-color: var(--black);
+  background-color: #0e121b;
   padding-top: 4rem;
   padding-bottom: 8rem;
 }
 
 .sticky-image {
-  object-fit: cover;
+  /* object-fit: cover; */
   width: 100%;
   height: 100%;
   position: absolute;
@@ -5849,7 +5851,7 @@ blockquote {
 
 .sticky-image-wrapper {
   border-radius: 16px;
-  width: 100%;
+  width: 35rem;
   height: 50vh;
   position: sticky;
   top: 20vh;
@@ -5861,7 +5863,7 @@ blockquote {
 }
 
 .sticky-component-grid {
-  grid-column-gap: 1rem;
+  grid-column-gap: 0;
   grid-row-gap: 1rem;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
@@ -6387,7 +6389,7 @@ blockquote {
 
 .section-home-our-services,
 .section-home-case-studies {
-  background-color: var(--black);
+  background-color: #0e121b;
 }
 
 .case-sticky-wrapper {
@@ -6412,6 +6414,9 @@ blockquote {
 
 .case-sticky-wrapper._02 {
   z-index: 3;
+}
+.case-sticky-wrapper._05{
+  z-index: 0;
 }
 
 .case-info-grid {
@@ -6540,13 +6545,14 @@ blockquote {
 }
 
 .section-home-testimonial {
-  background-color: var(--light-grey);
+  background-color: #0e121b;
   overflow: clip;
 }
 
 .testimonial-text {
   font-size: 1.125rem;
   font-style: italic;
+  color: #333;
 }
 
 .horizontal-testimonial-container {
@@ -6595,6 +6601,7 @@ blockquote {
 .testimonial-name {
   font-size: 1.25rem;
   font-weight: 400;
+  color: #333;
 }
 
 .horizontal-testimonial-item {
@@ -7608,7 +7615,7 @@ blockquote {
   }
 
   .sticky-component-grid {
-    grid-column-gap: 2rem;
+    grid-column-gap: 0;
     grid-row-gap: 2rem;
   }
 }
@@ -8533,7 +8540,7 @@ blockquote {
   }
 
   .header-image-item {
-    width: 8rem;
+    width: 12rem;
     height: 8rem;
   }
 
@@ -8563,8 +8570,8 @@ blockquote {
 
   .header-image {
     border-radius: 10px;
-    width: 8rem;
-    height: 8rem;
+    width: 100%;
+    height: 100%;
   }
 
   .header-title {
@@ -9231,12 +9238,15 @@ blockquote {
   }
 
   .header-image-item {
-    width: 8rem;
+    width: 12rem;
     height: 8rem;
+    /* margin-left: -15%; */
   }
 
   .header-image {
     border-radius: 8px;
+    height: 100%;
+    width: 100%;
   }
 
   .header-title {
@@ -10138,4 +10148,251 @@ blockquote {
 
 .ABT-btn{
   background-color: #864ffe !important;
+}
+.sticky-btn-group {
+  display: flex;
+  gap: 12px; /* space between buttons */
+  margin-top: 20px;
+  flex-wrap: wrap; /* responsive */
+}
+
+.btn-primary-view {
+  background-color: #864ffe;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-view:hover {
+  background-color: white;
+  color: #000;
+}
+
+.btn-outline-exp {
+  border: 1px solid white;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-exp:hover {
+    border: 1px solid #864ffe;
+  background-color: #864ffe;
+  color: #fff;
+}
+
+
+
+
+
+.CUSTOM-scroll-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Sticky Image Logic */
+.CUSTOM-sticky-center {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none; /* Allows scrolling through the image */
+}
+
+.CUSTOM-image-frame {
+  position: relative;
+  width: 550px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.CUSTOM-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 0.8s ease, transform 1.2s ease;
+}
+
+
+.CUSTOM-image.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Content Layout */
+.CUSTOM-content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.CUSTOM-step {
+  height: var(--step-height);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 0% 0 5%;
+  margin-bottom: var(--spacing);
+}
+
+.CUSTOM-text-box {
+  max-width: 400px;
+  /* opacity: 0.1; */
+  transform: translateY(30px);
+  transition: none;
+}
+
+/* Active State for Text */
+.CUSTOM-step.active .CUSTOM-text-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sequencing: Left vs Right */
+.CUSTOM-left .CUSTOM-text-box {
+  grid-column: 1;
+}
+
+.CUSTOM-right .CUSTOM-text-box {
+  grid-column: 2;
+  justify-self: end;
+}
+
+/* Typography */
+.CUSTOM-tag {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.CUSTOM-title {
+  font-size: 3.5rem;
+  margin: 10px 0;
+}
+
+.CUSTOM-desc {
+  width: 90%;
+}
+
+.CUSTOM-left_four{
+  padding-bottom: 10%;
+}
+
+.CUSTOM-text-box{
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+
+/* ============================= */
+/* MOBILE + TABLET GRID VERSION */
+/* ============================= */
+
+@media (max-width: 991px) {
+
+  /* Disable sticky center image */
+  .CUSTOM-sticky-center {
+    display: none;
+  }
+
+  /* Reduce step height */
+  .CUSTOM-step {
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+  }
+
+  /* Make each step a card */
+  .CUSTOM-step {
+    display: grid;
+    gap: 20px;
+  }
+
+  /* Add image inside each step */
+  .CUSTOM-step::before {
+    content: "";
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Map images to steps */
+  .CUSTOM-step[data-index="0"]::before {
+    background-image: url("https://ateliertechnologysolutions.com/images/gymD.png");
+  }
+
+  .CUSTOM-step[data-index="1"]::before {
+    background-image: url("https://ateliertechnologysolutions.com/images/tmsDash.png");
+  }
+
+  .CUSTOM-step[data-index="2"]::before {
+    background-image: url("https://ateliertechnologysolutions.com/images/erpDash.png");
+  }
+
+  .CUSTOM-step[data-index="3"]::before {
+    background-image: url("https://ateliertechnologysolutions.com/images/hms.png");
+  }
+
+  .CUSTOM-step[data-index="4"]::before {
+    background-image: url("https://ateliertechnologysolutions.com/inventory/Report.png");
+  }
+
+  /* Reset text alignment */
+  .CUSTOM-left .CUSTOM-text-box,
+  .CUSTOM-right .CUSTOM-text-box {
+    grid-column: auto;
+    justify-self: start;
+    max-width: 100%;
+  }
+
+  /* Typography scaling */
+  .CUSTOM-title {
+    font-size: 2rem;
+  }
+
+  .CUSTOM-desc {
+    width: 100%;
+  }
+    .CUSTOM-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .CUSTOM-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+  }
+
+  .CUSTOM-step {
+    margin-bottom: 0;
+  }
+  .sticky-text{
+    size: 1rem;
+    width: 100%;
+  }
 }
