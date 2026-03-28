@@ -5480,10 +5480,12 @@ blockquote {
 
 .header-image-item {
   width: 30rem;           
-  height: 20rem;
+  height: fit-content;
   position: absolute;
   transform: translate(0);
   margin-left: -10%;
+  overflow: hidden; 
+   border-radius: 14px;
 }
 
 .header-image-item._01 {
@@ -5513,9 +5515,9 @@ blockquote {
 }
 
 .header-image {
-  /* object-fit: cover; */
+  object-fit: contain;
   border-radius: 14px;
-  width: 100%;
+  width: 100%;           
   height: 100%;
 
 }
