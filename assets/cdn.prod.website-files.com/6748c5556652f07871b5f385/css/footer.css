@@ -221,9 +221,13 @@
     grid-row-gap: 2.5rem;
     flex-flow: column;
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(1,1fr);
     grid-auto-columns: 1fr;
     display: grid;
+  }
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
