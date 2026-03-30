@@ -3843,7 +3843,7 @@ blockquote {
 }
 
 .padding-xhuge {
-  padding: 8rem;
+  padding: 0rem;
 }
 
 .icon-height-medium {
@@ -4433,8 +4433,8 @@ blockquote {
 }
 
 .padding-section-large {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .background-color-primary {
@@ -7922,6 +7922,7 @@ blockquote {
   .header-image-item {
     width: 16rem;
     height: 16rem;
+    margin: -10px;
   }
 
   .header-image {
@@ -8547,6 +8548,7 @@ blockquote {
   .header-image-item {
     width: 12rem;
     height: 8rem;
+    margin: 0;
   }
 
   .header-image-item._01 {
@@ -9245,7 +9247,7 @@ blockquote {
   .header-image-item {
     width: 12rem;
     height: 8rem;
-    /* margin-left: -15%; */
+    margin-left: -28%;
   }
 
   .header-image {
@@ -10316,79 +10318,86 @@ blockquote {
 /* MOBILE + TABLET GRID VERSION */
 /* ============================= */
 
+/* Hide mobile block on desktop */
+.CUSTOM-mobile-section {
+  display: none;
+}
+
+/* Show only on mobile */
 @media (max-width: 991px) {
 
-  /* Disable sticky center image */
-  .CUSTOM-sticky-center {
+  /* Hide desktop scroll section */
+  .CUSTOM-scroll-container {
     display: none;
   }
 
-  /* Reduce step height */
-  .CUSTOM-step {
-    height: auto;
-    grid-template-columns: 1fr;
+  .CUSTOM-mobile-section {
+    display: block;
     padding: 40px 20px;
-    margin-bottom: 40px;
+  }
+
+  .CUSTOM-mobile-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+  }
+
+  .CUSTOM-mobile-card {
     border-radius: 16px;
   }
 
-  /* Make each step a card */
-  .CUSTOM-step {
-    display: grid;
-    gap: 20px;
-  }
-
-  /* Add image inside each step */
-  .CUSTOM-step::before {
-    content: "";
+  .CUSTOM-mobile-card img {
     width: 100%;
-    height: 220px;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-bottom: 15px;
   }
 
-  /* Map images to steps */
-  .CUSTOM-step[data-index="0"]::before {
-    background-image: url("https://ateliertechnologysolutions.com/images/gymD.png");
+  .CUSTOM-mobile-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
   }
 
-  .CUSTOM-step[data-index="1"]::before {
-    background-image: url("https://ateliertechnologysolutions.com/images/tmsDash.png");
+  .CUSTOM-mobile-card p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+
+  /* Hide desktop scroll section */
+  .CUSTOM-scroll-container {
+    display: none;
   }
 
-  .CUSTOM-step[data-index="2"]::before {
-    background-image: url("https://ateliertechnologysolutions.com/images/erpDash.png");
+  .CUSTOM-mobile-section {
+    display: block;
+    padding: 40px 20px;
   }
 
-  .CUSTOM-step[data-index="3"]::before {
-    background-image: url("https://ateliertechnologysolutions.com/images/hms.png");
+  .CUSTOM-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .CUSTOM-step[data-index="4"]::before {
-    background-image: url("https://ateliertechnologysolutions.com/inventory/Report.png");
+  .CUSTOM-mobile-card {
+    border-radius: 16px;
   }
 
-  /* Reset text alignment */
-  .CUSTOM-left .CUSTOM-text-box,
-  .CUSTOM-right .CUSTOM-text-box {
-    grid-column: auto;
-    justify-self: start;
-    max-width: 100%;
-  }
-
-  /* Typography scaling */
-  .CUSTOM-title {
-    font-size: 2rem;
-  }
-
-  .CUSTOM-desc {
+  .CUSTOM-mobile-card img {
     width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-bottom: 15px;
   }
-    .CUSTOM-content-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
+
+  .CUSTOM-mobile-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .CUSTOM-mobile-card p {
+    font-size: 0.95rem;
   }
 }
 
@@ -10399,7 +10408,9 @@ blockquote {
     grid-template-columns: repeat(1,1fr);
     gap: 20px;
   }
-
+.padding-xhuge{
+  padding: 0;
+}
   .CUSTOM-step {
     margin-bottom: 0;
   }
@@ -10436,4 +10447,91 @@ blockquote {
   .testimonial-content{
     padding: 1.5rem;
   } */
+}
+
+.section-home-zoom {
+  transition: background-color 0.8s ease; /* smooth BG change */
+}
+
+.zoom-sticky-inner img {
+  transition: opacity 0.6s ease, transform 0.6s ease; /* smooth image animation */
+}
+
+@media (max-width:991px) {
+  .section-home-case-studies{
+
+    display: none;
+  }
+}
+
+
+/* Hide mobile section on desktop */
+.TEST-Mob-section {
+  display: none;
+}
+
+/* MOBILE VIEW */
+
+/* TABLET + MOBILE */
+@media (max-width: 991px) {
+
+  /* Hide desktop testimonial */
+  .section-home-testimonial {
+    display: none;
+  }
+
+  .TEST-Mob-section {
+    display: block;
+    padding: 40px 20px;
+    background: #0e121b;
+    color: #fff;
+    text-align: center;
+  }
+
+  .TEST-Mob-heading {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .TEST-Mob-slider {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .TEST-Mob-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  /* 👇 TABLET DEFAULT = 2 ITEMS */
+  .TEST-Mob-item {
+    min-width: 50%;
+    padding: 20px;
+  }
+
+  .TEST-Mob-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  .TEST-Mob-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .TEST-Mob-text {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 1.5;
+  }
+}
+
+/* 👇 MOBILE = 1 ITEM */
+@media (max-width: 576px) {
+  .TEST-Mob-item {
+    min-width: 100%;
+  }
 }
