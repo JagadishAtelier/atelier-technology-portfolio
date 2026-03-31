@@ -5484,7 +5484,7 @@ blockquote {
   transform: translate(0);
   margin-left: -20%;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .header-image-item._01 {
@@ -5515,7 +5515,7 @@ blockquote {
 
 .header-image {
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 3px;
   width: 100%;
   height: 100%;
 
@@ -7946,7 +7946,7 @@ blockquote {
   }
 
   .header-image {
-    border-radius: 12px;
+    border-radius: 7px;
     width: 16rem;
     height: 16rem;
   }
@@ -8603,7 +8603,7 @@ blockquote {
   }
 
   .header-image {
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     height: 100%;
   }
@@ -9281,7 +9281,7 @@ blockquote {
   }
 
   .header-image {
-    border-radius: 8px;
+    border-radius: 3px;
     height: 100%;
     width: 100%;
   }
@@ -10261,7 +10261,7 @@ blockquote {
   position: relative;
   width: 550px;
   /* height: 350px; */
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
